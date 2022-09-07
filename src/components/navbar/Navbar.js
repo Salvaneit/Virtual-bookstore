@@ -18,9 +18,9 @@ function Navbar() {
         <h3>Books Bay</h3>
       </div>
       <div className='links'>
-        <NavLink exact to={'/'} style={linkStyles}><strong>Home</strong></NavLink>
-        <NavLink exact to={'/popular'} style={linkStyles}><strong>Popular</strong></NavLink>
-        <NavLink exact to={'/contact'} style={linkStyles}><strong>Contact us</strong></NavLink>
+        <NavLink exact to={'/'} style={linkStyles}><strong className='nav-link'>Home</strong></NavLink>
+        <NavLink exact to={'/popular'} style={linkStyles}><strong className='nav-link'>Popular</strong></NavLink>
+        <NavLink exact to={'/contact'} style={linkStyles}><strong className='nav-link'>Contact us</strong></NavLink>
       </div>
     </nav>
   )

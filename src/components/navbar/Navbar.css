@@ -21,6 +21,15 @@ nav{
   margin-top: 1rem;
 }
 
+.nav-link {
+  padding: 0.9rem 2rem;
+  transition-delay: 0.3s;
+}
+
+.nav-link:hover{
+  background-color: cyan;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
     animation: App-logo-spin infinite 20s linear;
