@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <nav>
       <div className='nav-items'>
-        <img src={logo_icon} alt='logo' className='app-logo' />
+        <img src='https://www.iconpacks.net/icons/2/free-book-icon-4986-thumb.png' alt='logo' className='app-logo' />
         <h3>Books Bay</h3>
       </div>
       <div className='links'>
