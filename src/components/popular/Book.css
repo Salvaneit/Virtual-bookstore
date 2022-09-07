@@ -1,0 +1,15 @@
+.book{
+  width: 30%;
+  border: solid 1px grey;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content {
+  margin: 1rem;
+}
+
+.content > h3{
+  text-align: center;
+}
