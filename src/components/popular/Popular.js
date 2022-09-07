@@ -22,7 +22,7 @@ function Popular() {
     setNewBookForm(!newBookForm)
   }
   //Handle add new book
-  function handleFormSubmit() {
+  function handleFormSubmit(formData) {
     console.log("submitted")
   }
 

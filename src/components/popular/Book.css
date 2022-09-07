@@ -13,3 +13,13 @@
 .content > h3{
   text-align: center;
 }
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  color: gold;
+}
+
+.icons > i {
+  font-size: 1.5rem;
+}
