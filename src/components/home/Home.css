@@ -1,3 +1,28 @@
 .home {
   display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+
+.text-container {
+  margin-top: 4rem;
+}
+
+.home-img {
+  width: 50%;
+}
+
+.grey {
+  color: grey;
+}
+
+.explore {
+  padding: 0.8rem;
+  border: none;
+  transition: 1s;
+}
+
+.explore:hover{
+  background-color: green;
+  color: white;
 }
