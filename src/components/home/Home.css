@@ -26,3 +26,8 @@
   background-color: green;
   color: white;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+}
