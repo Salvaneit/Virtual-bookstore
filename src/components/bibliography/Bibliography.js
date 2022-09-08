@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './Bibliography.css'
+import NewAuthor from './NewAuthor'
 
 function Bibliography() {
+  const[addAuthorForm, setAddAuthorForm] = useState(false)
+
+  function handleClick() {
+    setAddAuthorForm(!addAuthorForm)
+  }
+
   return (
-    <div>Bibliography</div>
+    <div>
+      <button className='add-author' onClick={handleClick}>{addAuthorForm? "Add an author" : "Hide form"}</button>
+      {addAuthorForm? <NewAuthor />: null}
+    </div>
   )
 }
 
