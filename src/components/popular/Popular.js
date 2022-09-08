@@ -62,8 +62,8 @@ function Popular() {
     return <Book key={book.id} book={book} onDelete={onDelete} />
   })
 
-    //Render events in rows of 4
-  //Mutates displayEvents into arrays of groups of 4
+    //Render events in rows of 3
+  //Mutates displayEvents into arrays of groups of 3
   function renderBooks() {
     let books = []
     let size = 3

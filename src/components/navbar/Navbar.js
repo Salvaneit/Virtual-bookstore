@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logo_icon from '../logo_icon.svg'
 import './Navbar.css'
 
 function Navbar() {
