@@ -3,10 +3,13 @@ import { useEffect, useState } from 'react'
 import './Popular.css'
 import NewBookForm from './NewBookForm'
 import Book from './Book'
+import Filter from './Filter'
 
 function Popular() {
   const[newBookForm, setNewBookForm] = useState(false)
   const [data, setData] = useState([])
+  const [category, setCategory] = useState("All")
+  const [search, setSearch] = useState("")
 
 
   // fetch events data from api
@@ -23,17 +26,27 @@ function Popular() {
   }
 
  //Post new book on database and rerender page
- function handleFormSubmit(formData) {
-  fetch("http://localhost:9292/books",{
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData)
-  })
-    .then((res) => res.json())
-    .then((obj) => setData([...data, obj]))
-}
+  function handleFormSubmit(formData) {
+    fetch("http://localhost:9292/books",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((res) => res.json())
+      .then((obj) => setData([...data, obj]))
+  }
+
+    //Update category to selected item
+  function handleCategoryChange(event) {
+    setCategory(event.target.value);
+  }
+
+  //Update search
+  function handleSearchChange(e) {
+    setSearch(e.target.value)
+  }
 
   //Pass books data as props to Book component
   const displayBooks = data.map((book) => {
@@ -76,6 +89,7 @@ function Popular() {
     <div>
       <button className='post-book' onClick={handleClick}> {newBookForm ? 'Hide form': 'Add a book'} </button>
       {newBookForm ? <NewBookForm onFormSubmit={handleFormSubmit} />: null}
+      <Filter search={search} onCategoryChange={handleCategoryChange} onSearchChange={handleSearchChange} />
       {renderBooks()}
     </div>
   )
