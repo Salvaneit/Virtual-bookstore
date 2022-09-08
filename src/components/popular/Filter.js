@@ -19,7 +19,7 @@ function Filter({onCategoryChange, onSearchChange, search}) {
     <div className='filter'>
       <input className='search' type='text' name='search' placeholder='Search book...' value={search} onChange={onSearchChange} />
       <select name='sort' onChange={onCategoryChange}>
-        <option value='all'>All</option>
+        <option value='All'>All</option>
         {options}
       </select>
     </div>
