@@ -38,7 +38,7 @@ function Popular() {
       .then((obj) => setData([...data, obj]))
   }
 
-    //Update category to selected item
+  //Update category to selected item
   function handleCategoryChange(event) {
     setCategory(event.target.value);
   }
@@ -62,8 +62,8 @@ function Popular() {
     return <Book key={book.id} book={book} onDelete={onDelete} />
   })
 
-    //Render events in rows of 3
-  //Mutates displayEvents into arrays of groups of 3
+  //Render books in rows of 3
+  //Mutates displaybooks into arrays of groups of 3
   function renderBooks() {
     let books = []
     let size = 3
