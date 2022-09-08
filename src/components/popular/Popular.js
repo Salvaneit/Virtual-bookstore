@@ -58,7 +58,18 @@ function Popular() {
 
   // Handle delete
   function onDelete(id) {
-    fetch('http://localhost:9292/books/:id')
+    fetch(`http://localhost:9292/books/${id}`, {
+      method: 'DELETE',
+    })
+    .then((res) => res.json())
+    .then(() => console.log("Deleted"))
+
+    //Update books data state
+    setData(data.filter((book) => {
+      if(book.id !== id) {
+        return book
+      } 
+    }))
   }
 
   return (
