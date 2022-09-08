@@ -16,7 +16,7 @@ function Book({book, onDelete}) {
         <p>Author: {author.name}</p>
         <p>Price: {price} </p>
         <div className='icons'>
-          <i className="fa-solid fa-square-plus"></i>
+          {/* <i className="fa-solid fa-square-plus"></i> */}
           <i className="fa-sharp fa-solid fa-trash" onClick={handleDelete} ></i>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './navbar/Navbar';
@@ -8,6 +8,9 @@ import ContactUs from './contact-us/ContactUs';
 import Bibliography from './bibliography/Bibliography';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Books-bay';
+  });
   return (
     <div>
       <Navbar />
