@@ -15,20 +15,29 @@ function Popular() {
       .then((res) => res.json())
       .then((r) => setData(r))
   }, [])
-  console.log(data)
+  // console.log(data)
 
   //Display form onclick
   function handleClick() {
     setNewBookForm(!newBookForm)
   }
-  //Handle add new book
-  function handleFormSubmit(formData) {
-    console.log("submitted")
-  }
+
+ //Post new book on database and rerender page
+ function handleFormSubmit(formData) {
+  fetch("http://localhost:9292/books",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData)
+  })
+    .then((res) => res.json())
+    .then((obj) => setData([...data, obj]))
+}
 
   //Pass books data as props to Book component
   const displayBooks = data.map((book) => {
-    return <Book key={book.id} book={book} />
+    return <Book key={book.id} book={book} onDelete={onDelete} />
   })
 
     //Render events in rows of 4
@@ -45,6 +54,11 @@ function Popular() {
     })
 
     return renderBooks
+  }
+
+  // Handle delete
+  function onDelete(id) {
+    fetch('http://localhost:9292/books/:id')
   }
 
   return (

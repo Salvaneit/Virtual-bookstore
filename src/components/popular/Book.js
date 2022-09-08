@@ -1,8 +1,13 @@
 import React from 'react'
 import './Book.css'
 
-function Book({book}) {
+function Book({book, onDelete}) {
   const{name, preview, author, price} = book
+
+  function handleDelete(){
+    onDelete(book.id)
+  }
+
   return (
     <div className='book'>
       <div className='content'>
@@ -11,8 +16,8 @@ function Book({book}) {
         <p>Author: {author.name}</p>
         <p>Price: {price} </p>
         <div className='icons'>
-          <i class="fa-solid fa-square-plus"></i>
-          <i class="fa-sharp fa-solid fa-trash"></i>
+          <i className="fa-solid fa-square-plus"></i>
+          <i className="fa-sharp fa-solid fa-trash" onClick={handleDelete} ></i>
         </div>
       </div>
     </div>
