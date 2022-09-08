@@ -14,7 +14,7 @@ function Bibliography() {
 
  //Post new book on database and rerender page
   function handleFormSubmit(formData) {
-    fetch("http://localhost:9292/authors",{
+    fetch("https://books-bay-app.herokuapp.com/authors",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +27,7 @@ function Bibliography() {
 
   //fetch author data
   useEffect(() => {
-    fetch("http://localhost:9292/authors")
+    fetch("https://books-bay-app.herokuapp.com/authors")
       .then((res) => res.json())
       .then((r) => setAuthorsData(r))
   }, [])

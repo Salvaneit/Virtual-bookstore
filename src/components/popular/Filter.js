@@ -6,7 +6,7 @@ function Filter({onCategoryChange, onSearchChange, search}) {
   const [authors, setAuthors] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:9292/authors')
+    fetch('https://books-bay-app.herokuapp.com/authors')
       .then((res) => res.json())
       .then((data) => setAuthors(data) )
   },[])

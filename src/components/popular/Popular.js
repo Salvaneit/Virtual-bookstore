@@ -14,7 +14,7 @@ function Popular() {
 
   // fetch events data from api
   useEffect(() => {
-    fetch("http://localhost:9292/books")
+    fetch("https://books-bay-app.herokuapp.com/books")
       .then((res) => res.json())
       .then((r) => setData(r))
   }, [])
@@ -27,7 +27,7 @@ function Popular() {
 
  //Post new book on database and rerender page
   function handleFormSubmit(formData) {
-    fetch("http://localhost:9292/books",{
+    fetch("https://books-bay-app.herokuapp.com/books",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +80,7 @@ function Popular() {
 
   // Handle delete
   function onDelete(id) {
-    fetch(`http://localhost:9292/books/${id}`, {
+    fetch(`https://books-bay-app.herokuapp.com/books/${id}`, {
       method: 'DELETE',
     })
     .then((res) => res.json())
