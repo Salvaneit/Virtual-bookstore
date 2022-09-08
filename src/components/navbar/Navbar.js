@@ -20,6 +20,7 @@ function Navbar() {
       <div className='links'>
         <NavLink exact to={'/'} style={linkStyles}><strong className='nav-link'>Home</strong></NavLink>
         <NavLink exact to={'/popular'} style={linkStyles}><strong className='nav-link'>Popular</strong></NavLink>
+        <NavLink exact to={'/bibliography'} style={linkStyles}><strong className='nav-link'>Bibliography</strong></NavLink>
         <NavLink exact to={'/contact'} style={linkStyles}><strong className='nav-link'>Contact us</strong></NavLink>
       </div>
     </nav>
