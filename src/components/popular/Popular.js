@@ -48,8 +48,17 @@ function Popular() {
     setSearch(e.target.value)
   }
 
+  //set books based on search and category selected
+  const booksToDisplay = data
+    // category
+    .filter(
+      (book) => category === "All" || book.author.name === category
+    )
+    // search term
+    .filter((book) => book.name.toLowerCase().includes(search.toLowerCase()));
+
   //Pass books data as props to Book component
-  const displayBooks = data.map((book) => {
+  const displayBooks = booksToDisplay.map((book) => {
     return <Book key={book.id} book={book} onDelete={onDelete} />
   })
 
