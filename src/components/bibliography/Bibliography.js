@@ -12,9 +12,17 @@ function Bibliography() {
     setAddAuthorForm(!addAuthorForm)
   }
 
-  //Handle new author form submit
-  function handleFormSubmit(formData){
-    console.log("Submit")
+ //Post new book on database and rerender page
+  function handleFormSubmit(formData) {
+    fetch("http://localhost:9292/authors",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((res) => res.json())
+      .then((obj) => setAuthorsData([...authorsData, obj]))
   }
 
   //fetch author data

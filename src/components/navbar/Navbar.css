@@ -24,11 +24,12 @@ nav{
 
 .nav-link {
   padding: 0.9rem 2rem;
-  transition-delay: 0.3s;
+  transition: 1s;
 }
 
 .nav-link:hover{
-  background-color: cyan;
+  transform: scale(1.1, 1.1);
+  color: gold;
 }
 
 @media (prefers-reduced-motion: no-preference) {

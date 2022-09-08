@@ -1,6 +1,11 @@
 .author-card{
-  background-color: grey;
+  background-color: rgb(211, 211, 211);
   width: 30%;
   margin-top: 3rem;
   border-radius: 15px;
+  transition: 0.5s;
+}
+
+.author-card:hover{
+  transform: scale(1.1, 1.1);
 }

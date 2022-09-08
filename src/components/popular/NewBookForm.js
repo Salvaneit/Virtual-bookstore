@@ -23,7 +23,7 @@ function NewBookForm({ onFormSubmit }) {
 
   //handle form submit
   function handleSubmit(e) {
-    e.preventDefault()
+    // e.preventDefault()
     onFormSubmit(formData)
     setFormData({
       name: "",
