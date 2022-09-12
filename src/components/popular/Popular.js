@@ -59,7 +59,7 @@ function Popular() {
 
   //Pass books data as props to Book component
   const displayBooks = booksToDisplay.map((book) => {
-    return <Book key={book.id} book={book} onDelete={onDelete} />
+    return <Book key={book.id} book={book} onDelete={onDelete} onUpdate={handleBookUpdate}  />
   })
 
   //Render books in rows of 3
@@ -92,6 +92,25 @@ function Popular() {
         return book
       } 
     }))
+  }
+
+  function handleBookUpdate(formData) {
+    fetch(`https://books-bay-app.herokuapp.com/books/${formData.id}`, {
+      method: 'UPDATE',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        body: formData,
+      })
+      .then((res) => res.json())
+      .then((updatedBook) => setData(data.find((book) => {
+        if (book.id == updatedBook.id) {
+          return book = updatedBook
+        }
+      })))
+
+    })
   }
 
   return (

@@ -22,7 +22,7 @@ This is an online bookstore specifically for Kenyan novelists. The app uses Sina
 
 ## Description
 
-This is a website showing books available at an online store written by the best kenyan authors. The app also has a bibliography section showing information about the authors and some of the books they hav written.
+This is a website showing books available at an online store written by the best kenyan authors. The app also has a bibliography section showing information about the authors and some of the books they have written.
 
 ## Design
 https://www.figma.com/file/FidQxrcOtPnvMmzxxJlRge/Online-Bookstore?node-id=0%3A1
