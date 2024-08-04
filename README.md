@@ -1,4 +1,4 @@
-# EVENTS HUB
+# VIRTUAL BOOKSTORE TEST
 
 This is an online bookstore specifically for Kenyan novelists. The app uses Sinatra to display books on the react application.The app uses react for it's front-end and ruby for the back-end.
 
